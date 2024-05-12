@@ -25,7 +25,7 @@ class TodoListPage extends ConsumerWidget {
             },
           ),
           AsyncError(:final error) => Center(child: Text('Error: $error')),
-          _ => const Center(child: Text('Loading...')),
+          _ => const Center(child: CircularProgressIndicator()),
         },
       ), 
     );
