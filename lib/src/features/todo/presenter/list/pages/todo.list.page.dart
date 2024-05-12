@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../controlers/todo.list.controller.dart';
 
@@ -28,6 +29,12 @@ class TodoListPage extends ConsumerWidget {
           _ => const Center(child: CircularProgressIndicator()),
         },
       ), 
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          context.go('/create');
+        },
+        child: const Icon(Icons.add),
+      )
     );
   }
 }
