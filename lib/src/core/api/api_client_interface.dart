@@ -1,5 +1,9 @@
 abstract class IApiClient {
-  Future get(String url, {Map<String, dynamic>? queryParameters});
+  Future get({
+    required String url, 
+    required List<Map<String, dynamic>> mockResponse,
+    Map<String, dynamic>? queryParameters
+  });
   Future post({
     required String url, 
     required Map<String, dynamic> body, 
@@ -7,5 +11,4 @@ abstract class IApiClient {
   });
   Future put(String url, {Map<String, dynamic>? body});
   Future delete(String url, {Map<String, dynamic>? body});
-  bool get isMocked;
 }
